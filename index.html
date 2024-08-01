@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTS - The K-pop Stars</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #120024;
+            color: white;
+        }
+        h1 {
+            text-align: center;
+            font-size: 3em;
+            color: #FF69B4;
+            text-shadow: 2px 2px 4px #000000;
+        }
+        .members-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .member {
+            margin: 20px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            transition: transform 0.3s ease;
+        }
+        .member:hover {
+            transform: scale(1.05);
+        }
+        .member h2 {
+            color: #FF69B4;
+        }
+        .heart {
+            color: #FF69B4;
+            font-size: 24px;
+            animation: beat 0.7s infinite alternate;
+            display: inline-block;
+        }
+        @keyframes beat {
+            to { transform: scale(1.1); }
+        }
+        .flip-container {
+            perspective: 1000px;
+            width: 250px;
+            height: 250px;
+            cursor: pointer;
+        }
+        .flipper {
+            transition: 0.6s;
+            transform-style: preserve-3d;
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        .flip-container.flipped .flipper {
+            transform: rotateY(180deg);
+        }
+        .front, .back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 15px rgba(255, 105, 180, 0.7);
+        }
+        .front {
+            z-index: 2;
+        }
+        .back {
+            transform: rotateY(180deg);
+            background-color: #FF69B4;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px;
+            text-align: center;
+        }
+        .front img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        .army-logo-container {
+            margin-top: 40px;
+            text-align: center;
+        }
+        .army-logo {
+            width: 200px;
+            height: 200px;
+            animation: spin 10s linear infinite;
+        }
+        @keyframes spin {
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <h1>BTS - The K-pop Stars <span class="heart">♥</span></h1>
+
+    <div class="members-container">
+        <div class="member">
+            <h2>RM (Kim Namjoon)</h2>
+            <div class="flip-container">
+                <div class="flipper">
+                    <div class="front">
+                        <img src="https://th.bing.com/th/id/OIP.NKV4c6ml18dy8R1QcFmBXQHaJo?rs=1&pid=ImgDetMain" alt="RM">
+                    </div>
+                    <div class="back">The Leader</div>
+                </div>
+            </div>
+            <p>Date of Birth: September 12, 1994</p>
+            <p>Age: 30 (as of 2025) <span class="heart">♥</span></p>
+        </div>
+
+        <div class="member">
+            <h2>Jin (Kim Seokjin)</h2>
+            <div class="flip-container">
+                <div class="flipper">
+                    <div class="front">
+                        <img src="https://kpopping.com/documents/34/1/2000/BTS-FESTA-2023-Take-Two-Live-Clip-Photo-Sketch-Jin-documents-1.jpeg?v=1fb1e" alt="Jin">
+                    </div>
+                    <div class="back">Worldwide Handsome</div>
+                </div>
+            </div>
+            <p>Date of Birth: December 4, 1992</p>
+            <p>Age: 32 (as of 2025) <span class="heart">♥</span></p>
+        </div>
+
+        <div class="member">
+            <h2>Suga (Min Yoongi)</h2>
+            <div class="flip-container">
+                <div class="flipper">
+                    <div class="front">
+                        <img src="https://lh3.googleusercontent.com/zEzkR04UhrPkGAtqZW165Rp73rOGeeK9H7-ZF0cXVxbkRspzn5peq3HaBF6hwf-nbMKa87FhR3RC6bWMp7FznIhwndObmLMAjq4=nu-e365-rj-q80-w925" alt="Suga">
+                    </div>
+                    <div class="back">Our Sugar</div>
+                </div>
+            </div>
+            <p>Date of Birth: March 9, 1993</p>
+            <p>Age: 32 (as of 2025) <span class="heart">♥</span></p>
+        </div>
+
+        <div class="member">
+            <h2>J-Hope (Jung Hoseok)</h2>
+            <div class="flip-container">
+                <div class="flipper">
+                    <div class="front">
+                        <img src="https://i.pinimg.com/originals/68/5a/b0/685ab0b0ce4d5c867c9bdb05bf3f754d.jpg" alt="J-Hope">
+                    </div>
+                    <div class="back">Our Sunshine</div>
+                </div>
+            </div>
+            <p>Date of Birth: February 18, 1994</p>
+            <p>Age: 31 (as of 2025) <span class="heart">♥</span></p>
+        </div>
+
+        <div class="member">
+            <h2>Jimin (Park Jimin)</h2>
+            <div class="flip-container">
+                <div class="flipper">
+                    <div class="front">
+                        <img src="https://i.pinimg.com/originals/35/db/30/35db309bddfd536c361149e9cc2c1b0a.jpg" alt="Jimin">
+                    </div>
+                    <div class="back">The Cutest</div>
+                </div>
+            </div>
+            <p>Date of Birth: October 13, 1995</p>
+            <p>Age: 29 (as of 2025) <span class="heart">♥</span></p>
+        </div>
+
+        <div class="member">
+            <h2>V (Kim Taehyung)</h2>
+            <div class="flip-container">
+                <div class="flipper">
+                    <div class="front">
+                        <img src="https://farm5.staticflickr.com/4420/37168548236_217d7348a5_o.jpg" alt="V">
+                    </div>
+                    <div class="back">Most Handsome</div>
+                </div>
+            </div>
+            <p>Date of Birth: December 30, 1995</p>
+            <p>Age: 29 (as of 2025) <span class="heart">♥</span></p>
+        </div>
+
+        <div class="member">
+            <h2>Jungkook (Jeon Jungkook)</h2>
+            <div class="flip-container">
+                <div class="flipper">
+                    <div class="front">
+                        <img src="https://i.pinimg.com/originals/21/62/a3/2162a33975fb7b3ae4346b13fddddf8d.jpg" alt="Jungkook">
+                    </div>
+                    <div class="back">International Playboy</div>
+                </div>
+            </div>
+            <p>Date of Birth: September 1, 1997</p>
+            <p>Age: 27 (as of 2025) <span class="heart">♥</span></p>
+        </div>
+    </div>
+
+    <div class="army-logo-container">
+        <div class="flip-container">
+            <div class="flipper">
+                <div class="front">
+                    <img src="https://1.bp.blogspot.com/-CGXWxq5qII0/X0XknEeS0CI/AAAAAAAAHEI/kPTSqiIeFXkxWRMqVjDoHxBDiiVvgp8fQCLcBGAsYHQ/s1800/BTS-ARMY-LOGO.png" alt="BTS ARMY Logo" class="army-logo">
+                </div>
+                <div class="back">WE LOVE BTS <span class="heart">♥</span></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.flip-container').forEach(container => {
+            container.addEventListener('click', function() {
+                this.classList.toggle('flipped');
+            });
+        });
+    </script>
+</body>
+</html>
